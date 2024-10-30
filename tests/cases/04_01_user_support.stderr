@@ -1,0 +1,12 @@
+[2024-07-25T15:33:15Z INFO  actix_server::builder] starting 16 workers
+[2024-07-25T15:33:15Z INFO  actix_server::server] Actix runtime found; starting in Actix runtime
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET / HTTP/1.1" 404 0 "-" "-" 0.000261
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /jobs HTTP/1.1" 404 66 "-" "-" 0.000253
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /users HTTP/1.1" 200 24 "-" "-" 0.000068
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /users HTTP/1.1" 200 23 "-" "-" 0.000086
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /jobs HTTP/1.1" 200 407 "-" "-" 0.215736
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /users HTTP/1.1" 200 48 "-" "-" 0.000107
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /users HTTP/1.1" 200 27 "-" "-" 0.000121
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /users HTTP/1.1" 200 52 "-" "-" 0.000080
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /users HTTP/1.1" 400 92 "-" "-" 0.000095
+[2024-07-25T15:33:16Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /users HTTP/1.1" 404 65 "-" "-" 0.000092

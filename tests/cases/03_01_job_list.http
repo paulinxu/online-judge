@@ -1,0 +1,68 @@
+###
+# Send request:
+GET http://127.0.0.1:12345/jobs HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 2
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:07 GMT
+# 
+# []
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 1077
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:07 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0},{"id":2,"info":"","result":"Accepted","time":0},{"id":3,"info":"","result":"Accepted","time":0},{"id":4,"info":"","result":"Accepted","time":0},{"id":5,"info":"","result":"Accepted","time":0},{"id":6,"info":"","result":"Accepted","time":0},{"id":7,"info":"","result":"Accepted","time":0},{"id":8,"info":"","result":"Accepted","time":0},{"id":9,"info":"","result":"Accepted","time":0},{"id":10,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:08.247894154Z","id":0,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0},"updated_time":"2024-07-25T15:33:08.465517460Z"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":2,"source_code":"fn main() {let mut data: Vec<u32> = Vec::new();loop {let mut line = String::new();if std::io::stdin().read_line(&mut line).unwrap() == 0 {break;}data.push(line.trim().parse().unwrap());}data.sort_by_key(|&x| x);data.into_iter().for_each(|x| println!(\"{}\", x));}","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 1062
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:08 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0},{"id":2,"info":"","result":"Accepted","time":0},{"id":3,"info":"","result":"Accepted","time":0},{"id":4,"info":"","result":"Accepted","time":0},{"id":5,"info":"","result":"Accepted","time":0},{"id":6,"info":"","result":"Accepted","time":0},{"id":7,"info":"","result":"Accepted","time":0},{"id":8,"info":"","result":"Accepted","time":0},{"id":9,"info":"","result":"Accepted","time":0},{"id":10,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:08.467028349Z","id":1,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":2,"source_code":"fn main() {let mut data: Vec<u32> = Vec::new();loop {let mut line = String::new();if std::io::stdin().read_line(&mut line).unwrap() == 0 {break;}data.push(line.trim().parse().unwrap());}data.sort_by_key(|&x| x);data.into_iter().for_each(|x| println!(\"{}\", x));}","user_id":0},"updated_time":"2024-07-25T15:33:08.726984038Z"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); }","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 407
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:08 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:08.728504979Z","id":2,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); }","user_id":0},"updated_time":"2024-07-25T15:33:08.918502789Z"}
+###
+# Send request:
+GET http://127.0.0.1:12345/jobs HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 2550
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:08 GMT
+# 
+# [{"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0},{"id":2,"info":"","result":"Accepted","time":0},{"id":3,"info":"","result":"Accepted","time":0},{"id":4,"info":"","result":"Accepted","time":0},{"id":5,"info":"","result":"Accepted","time":0},{"id":6,"info":"","result":"Accepted","time":0},{"id":7,"info":"","result":"Accepted","time":0},{"id":8,"info":"","result":"Accepted","time":0},{"id":9,"info":"","result":"Accepted","time":0},{"id":10,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:08.247894154Z","id":0,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0},"updated_time":"2024-07-25T15:33:08.465517460Z"},{"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0},{"id":2,"info":"","result":"Accepted","time":0},{"id":3,"info":"","result":"Accepted","time":0},{"id":4,"info":"","result":"Accepted","time":0},{"id":5,"info":"","result":"Accepted","time":0},{"id":6,"info":"","result":"Accepted","time":0},{"id":7,"info":"","result":"Accepted","time":0},{"id":8,"info":"","result":"Accepted","time":0},{"id":9,"info":"","result":"Accepted","time":0},{"id":10,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:08.467028349Z","id":1,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":2,"source_code":"fn main() {let mut data: Vec<u32> = Vec::new();loop {let mut line = String::new();if std::io::stdin().read_line(&mut line).unwrap() == 0 {break;}data.push(line.trim().parse().unwrap());}data.sort_by_key(|&x| x);data.into_iter().for_each(|x| println!(\"{}\", x));}","user_id":0},"updated_time":"2024-07-25T15:33:08.726984038Z"},{"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:08.728504979Z","id":2,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); }","user_id":0},"updated_time":"2024-07-25T15:33:08.918502789Z"}]

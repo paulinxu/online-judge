@@ -1,0 +1,123 @@
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); }","user_id":1}
+###
+# Got response:
+# HTTP 404
+# content-length: 66
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:15 GMT
+# 
+# {"code":3,"message":"HTTP 404 Not Found","reason":"ERR_NOT_FOUND"}
+###
+# Send request:
+GET http://127.0.0.1:12345/users HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 24
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:15 GMT
+# 
+# [{"id":0,"name":"root"}]
+###
+# Send request:
+POST http://127.0.0.1:12345/users HTTP/1.1
+content-type: application/json
+
+{"name":"user1"}
+###
+# Got response:
+# HTTP 200
+# content-length: 23
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:15 GMT
+# 
+# {"id":1,"name":"user1"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); }","user_id":1}
+###
+# Got response:
+# HTTP 200
+# content-length: 407
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:16 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:16.288452807Z","id":0,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); }","user_id":1},"updated_time":"2024-07-25T15:33:16.503954739Z"}
+###
+# Send request:
+GET http://127.0.0.1:12345/users HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 48
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:16 GMT
+# 
+# [{"id":0,"name":"root"},{"id":1,"name":"user1"}]
+###
+# Send request:
+POST http://127.0.0.1:12345/users HTTP/1.1
+content-type: application/json
+
+{"id":1,"name":"new_user1"}
+###
+# Got response:
+# HTTP 200
+# content-length: 27
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:16 GMT
+# 
+# {"id":1,"name":"new_user1"}
+###
+# Send request:
+GET http://127.0.0.1:12345/users HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 52
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:16 GMT
+# 
+# [{"id":0,"name":"root"},{"id":1,"name":"new_user1"}]
+###
+# Send request:
+POST http://127.0.0.1:12345/users HTTP/1.1
+content-type: application/json
+
+{"name":"new_user1"}
+###
+# Got response:
+# HTTP 400
+# content-length: 92
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:16 GMT
+# 
+# {"code":1,"message":"User name 'new_user1' already exists.","reason":"ERR_INVALID_ARGUMENT"}
+###
+# Send request:
+POST http://127.0.0.1:12345/users HTTP/1.1
+content-type: application/json
+
+{"id":2,"name":"user2"}
+###
+# Got response:
+# HTTP 404
+# content-length: 65
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:16 GMT
+# 
+# {"code":3,"message":"User 2 not found.","reason":"ERR_NOT_FOUND"}

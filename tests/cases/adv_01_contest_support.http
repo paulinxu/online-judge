@@ -1,0 +1,163 @@
+###
+# Send request:
+POST http://127.0.0.1:12345/users HTTP/1.1
+content-type: application/json
+
+{"name":"user1"}
+###
+# Got response:
+# HTTP 200
+# content-length: 23
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"id":1,"name":"user1"}
+###
+# Send request:
+POST http://127.0.0.1:12345/contests HTTP/1.1
+content-type: application/json
+
+{"from":"2000-01-01T00:00:00.000Z","name":"Contest 1","problem_ids":[0],"submission_limit":1,"to":"2030-01-01T00:00:00.000Z","user_ids":[1]}
+###
+# Got response:
+# HTTP 200
+# content-length: 795
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"from":"2000-01-01T00:00:00.000Z","id":1,"name":"Contest 1","problem_ids":[0],"submission_limit":1,"to":"2030-01-01T00:00:00.000Z","user_ids":[1],"users":[{"competitive_score_sum":0.0,"highest_scores":[0.0],"latest_scores":[0.0],"latest_submission":"+262142-12-31T23:59:59.999999999Z","rank":0,"score":0,"scores":[0.0],"shortest_times":[[9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807]],"submission_count":0,"user":{"id":1,"name":"user1"}}]}
+###
+# Send request:
+POST http://127.0.0.1:12345/contests HTTP/1.1
+content-type: application/json
+
+{"from":"2000-01-01T00:00:00.000Z","name":"Contest 2","problem_ids":[1],"submission_limit":1,"to":"2030-01-01T00:00:00.000Z","user_ids":[0]}
+###
+# Got response:
+# HTTP 200
+# content-length: 794
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"from":"2000-01-01T00:00:00.000Z","id":2,"name":"Contest 2","problem_ids":[1],"submission_limit":1,"to":"2030-01-01T00:00:00.000Z","user_ids":[0],"users":[{"competitive_score_sum":0.0,"highest_scores":[0.0],"latest_scores":[0.0],"latest_submission":"+262142-12-31T23:59:59.999999999Z","rank":0,"score":0,"scores":[0.0],"shortest_times":[[9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807]],"submission_count":0,"user":{"id":0,"name":"root"}}]}
+###
+# Send request:
+GET http://127.0.0.1:12345/contests HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 1592
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# [{"from":"2000-01-01T00:00:00.000Z","id":1,"name":"Contest 1","problem_ids":[0],"submission_limit":1,"to":"2030-01-01T00:00:00.000Z","user_ids":[1],"users":[{"competitive_score_sum":0.0,"highest_scores":[0.0],"latest_scores":[0.0],"latest_submission":"+262142-12-31T23:59:59.999999999Z","rank":0,"score":0,"scores":[0.0],"shortest_times":[[9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807]],"submission_count":0,"user":{"id":1,"name":"user1"}}]},{"from":"2000-01-01T00:00:00.000Z","id":2,"name":"Contest 2","problem_ids":[1],"submission_limit":1,"to":"2030-01-01T00:00:00.000Z","user_ids":[0],"users":[{"competitive_score_sum":0.0,"highest_scores":[0.0],"latest_scores":[0.0],"latest_submission":"+262142-12-31T23:59:59.999999999Z","rank":0,"score":0,"scores":[0.0],"shortest_times":[[9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807]],"submission_count":0,"user":{"id":0,"name":"root"}}]}]
+###
+# Send request:
+GET http://127.0.0.1:12345/contests/1 HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 795
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"from":"2000-01-01T00:00:00.000Z","id":1,"name":"Contest 1","problem_ids":[0],"submission_limit":1,"to":"2030-01-01T00:00:00.000Z","user_ids":[1],"users":[{"competitive_score_sum":0.0,"highest_scores":[0.0],"latest_scores":[0.0],"latest_submission":"+262142-12-31T23:59:59.999999999Z","rank":0,"score":0,"scores":[0.0],"shortest_times":[[9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807]],"submission_count":0,"user":{"id":1,"name":"user1"}}]}
+###
+# Send request:
+GET http://127.0.0.1:12345/contests/3 HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 404
+# content-length: 68
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"code":3,"message":"Contest 3 not found.","reason":"ERR_NOT_FOUND"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":2,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":1}
+###
+# Got response:
+# HTTP 400
+# content-length: 75
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"code":1,"message":"HTTP 400 Bad Request","reason":"ERR_INVALID_ARGUMENT"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":2,"language":"Rust","problem_id":0,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0}
+###
+# Got response:
+# HTTP 400
+# content-length: 75
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"code":1,"message":"HTTP 400 Bad Request","reason":"ERR_INVALID_ARGUMENT"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":2,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 1077
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0},{"id":2,"info":"","result":"Accepted","time":0},{"id":3,"info":"","result":"Accepted","time":0},{"id":4,"info":"","result":"Accepted","time":0},{"id":5,"info":"","result":"Accepted","time":0},{"id":6,"info":"","result":"Accepted","time":0},{"id":7,"info":"","result":"Accepted","time":0},{"id":8,"info":"","result":"Accepted","time":0},{"id":9,"info":"","result":"Accepted","time":0},{"id":10,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:32:21.721022089Z","id":0,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":2,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0},"updated_time":"2024-07-25T15:32:21.986380715Z"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":2,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0}
+###
+# Got response:
+# HTTP 400
+# content-length: 69
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# {"code":4,"message":"HTTP 400 Bad Request","reason":"ERR_RATE_LIMIT"}
+###
+# Send request:
+GET http://127.0.0.1:12345/contests/1/ranklist HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 639
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# [{"competitive_score_sum":0.0,"highest_scores":[0.0],"latest_scores":[0.0],"latest_submission":"+262142-12-31T23:59:59.999999999Z","rank":1,"score":0,"scores":[0.0],"shortest_times":[[9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807]],"submission_count":0,"user":{"id":1,"name":"user1"}}]
+###
+# Send request:
+GET http://127.0.0.1:12345/contests/2/ranklist HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 643
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:21 GMT
+# 
+# [{"competitive_score_sum":0.0,"highest_scores":[100.0],"latest_scores":[100.0],"latest_submission":"2024-07-25T15:32:21.721022089Z","rank":1,"score":100,"scores":[100.0],"shortest_times":[[9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807,9223372036854775807]],"submission_count":1,"user":{"id":0,"name":"root"}}]

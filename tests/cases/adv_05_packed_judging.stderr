@@ -1,0 +1,4 @@
+[2024-07-25T15:32:34Z INFO  actix_server::builder] starting 16 workers
+[2024-07-25T15:32:34Z INFO  actix_server::server] Actix runtime found; starting in Actix runtime
+[2024-07-25T15:32:35Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET / HTTP/1.1" 404 0 "-" "-" 0.000323
+[2024-07-25T15:32:35Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /jobs HTTP/1.1" 200 1088 "-" "-" 0.250033

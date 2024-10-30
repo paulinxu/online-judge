@@ -1,0 +1,42 @@
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World.\"); }","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 413
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:54 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Wrong Answer","time":0}],"created_time":"2024-07-25T15:32:54.548774711Z","id":0,"result":"Wrong Answer","score":0.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World.\"); }","user_id":0},"updated_time":"2024-07-25T15:32:54.730807897Z"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { panic!(\"Hello World!\"); }","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 413
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:54 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Runtime Error","time":0}],"created_time":"2024-07-25T15:32:54.732106991Z","id":1,"result":"Runtime Error","score":0.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { panic!(\"Hello World!\"); }","user_id":0},"updated_time":"2024-07-25T15:32:54.900612028Z"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!{}\"); }","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 413
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:54 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Error","time":0},{"id":1,"info":"","result":"Waiting","time":0}],"created_time":"2024-07-25T15:32:54.902436520Z","id":2,"result":"Compilation Error","score":0.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!{}\"); }","user_id":0},"updated_time":"2024-07-25T15:32:54.938296699Z"}

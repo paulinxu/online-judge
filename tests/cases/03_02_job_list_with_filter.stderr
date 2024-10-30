@@ -1,0 +1,12 @@
+[2024-07-25T15:33:09Z INFO  actix_server::builder] starting 16 workers
+[2024-07-25T15:33:09Z INFO  actix_server::server] Actix runtime found; starting in Actix runtime
+[2024-07-25T15:33:10Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET / HTTP/1.1" 404 0 "-" "-" 0.000216
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /jobs HTTP/1.1" 200 1077 "-" "-" 0.213682
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /jobs HTTP/1.1" 200 1062 "-" "-" 0.305997
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /jobs HTTP/1.1" 200 436 "-" "-" 0.099146
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /jobs?result=Accepted HTTP/1.1" 200 2579 "-" "-" 0.000216
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /jobs?problem_id=0&state=Finished HTTP/1.1" 200 438 "-" "-" 0.000105
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /jobs?problem_id=0&state=Finished HTTP/1.1" 200 438 "-" "-" 0.000087
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /jobs?language=C HTTP/1.1" 200 438 "-" "-" 0.000085
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /jobs/2 HTTP/1.1" 200 436 "-" "-" 0.000090
+[2024-07-25T15:33:11Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET /jobs/0 HTTP/1.1" 200 1077 "-" "-" 0.000117

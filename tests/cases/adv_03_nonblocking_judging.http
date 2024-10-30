@@ -1,0 +1,8 @@
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); loop {} }","user_id":0}
+###
+Got error: reqwest::Error { kind: Request, url: Url { scheme: "http", cannot_be_a_base: false, username: "", password: None, host: Some(Ipv4(127.0.0.1)), port: Some(12345), path: "/jobs", query: None, fragment: None }, source: TimedOut }

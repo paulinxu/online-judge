@@ -1,0 +1,11 @@
+[2024-07-25T15:33:12Z INFO  actix_server::builder] starting 16 workers
+[2024-07-25T15:33:12Z INFO  actix_server::server] Actix runtime found; starting in Actix runtime
+[2024-07-25T15:33:13Z INFO  actix_web::middleware::logger] 127.0.0.1 "GET / HTTP/1.1" 404 0 "-" "-" 0.000107
+[2024-07-25T15:33:13Z INFO  actix_web::middleware::logger] 127.0.0.1 "PUT /jobs/0 HTTP/1.1" 404 64 "-" "-" 0.000212
+[2024-07-25T15:33:13Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /jobs HTTP/1.1" 200 1077 "-" "-" 0.270063
+[2024-07-25T15:33:13Z INFO  actix_web::middleware::logger] 127.0.0.1 "POST /jobs HTTP/1.1" 200 436 "-" "-" 0.120432
+[2024-07-25T15:33:14Z INFO  oj::jobs_module::function_put_jobs] Successfull put with ID: 0
+[2024-07-25T15:33:14Z INFO  actix_web::middleware::logger] 127.0.0.1 "PUT /jobs/0 HTTP/1.1" 200 1077 "-" "-" 0.204430
+[2024-07-25T15:33:14Z INFO  oj::jobs_module::function_put_jobs] Successfull put with ID: 1
+[2024-07-25T15:33:14Z INFO  actix_web::middleware::logger] 127.0.0.1 "PUT /jobs/1 HTTP/1.1" 200 436 "-" "-" 0.112183
+[2024-07-25T15:33:14Z INFO  actix_web::middleware::logger] 127.0.0.1 "PUT /jobs/2 HTTP/1.1" 404 64 "-" "-" 0.000176

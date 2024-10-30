@@ -1,0 +1,27 @@
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); }","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 407
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:23 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:32:23.993733776Z","id":0,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":0,"source_code":"fn main() { println!(\"Hello World!\"); }","user_id":0},"updated_time":"2024-07-25T15:32:24.185641991Z"}
+###
+# Send request:
+GET http://127.0.0.1:12345/jobs HTTP/1.1
+
+
+###
+# Got response:
+# HTTP 200
+# content-length: 2
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:25 GMT
+# 
+# []

@@ -1,0 +1,84 @@
+###
+# Send request:
+PUT http://127.0.0.1:12345/jobs/0 HTTP/1.1
+content-type: application/json
+
+{}
+###
+# Got response:
+# HTTP 404
+# content-length: 64
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:13 GMT
+# 
+# {"code":3,"message":"Job 0 not found.","reason":"ERR_NOT_FOUND"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 1077
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:13 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0},{"id":2,"info":"","result":"Accepted","time":0},{"id":3,"info":"","result":"Accepted","time":0},{"id":4,"info":"","result":"Accepted","time":0},{"id":5,"info":"","result":"Accepted","time":0},{"id":6,"info":"","result":"Accepted","time":0},{"id":7,"info":"","result":"Accepted","time":0},{"id":8,"info":"","result":"Accepted","time":0},{"id":9,"info":"","result":"Accepted","time":0},{"id":10,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:13.566933391Z","id":0,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0},"updated_time":"2024-07-25T15:33:13.836768434Z"}
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"C","problem_id":0,"source_code":"#include <stdio.h>\nint main() { printf(\"Hello World!\\n\"); return 0; }","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 436
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:13 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:13.838773960Z","id":1,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"C","problem_id":0,"source_code":"#include <stdio.h>\nint main() { printf(\"Hello World!\\n\"); return 0; }","user_id":0},"updated_time":"2024-07-25T15:33:13.958967880Z"}
+###
+# Send request:
+PUT http://127.0.0.1:12345/jobs/0 HTTP/1.1
+content-type: application/json
+
+{}
+###
+# Got response:
+# HTTP 200
+# content-length: 1077
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:13 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0},{"id":2,"info":"","result":"Accepted","time":0},{"id":3,"info":"","result":"Accepted","time":0},{"id":4,"info":"","result":"Accepted","time":0},{"id":5,"info":"","result":"Accepted","time":0},{"id":6,"info":"","result":"Accepted","time":0},{"id":7,"info":"","result":"Accepted","time":0},{"id":8,"info":"","result":"Accepted","time":0},{"id":9,"info":"","result":"Accepted","time":0},{"id":10,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:13.960479756Z","id":0,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b);}","user_id":0},"updated_time":"2024-07-25T15:33:14.164576059Z"}
+###
+# Send request:
+PUT http://127.0.0.1:12345/jobs/1 HTTP/1.1
+content-type: application/json
+
+{}
+###
+# Got response:
+# HTTP 200
+# content-length: 436
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:14 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Accepted","time":0}],"created_time":"2024-07-25T15:33:14.166308212Z","id":1,"result":"Accepted","score":100.0,"state":"Finished","submission":{"contest_id":0,"language":"C","problem_id":0,"source_code":"#include <stdio.h>\nint main() { printf(\"Hello World!\\n\"); return 0; }","user_id":0},"updated_time":"2024-07-25T15:33:14.278190895Z"}
+###
+# Send request:
+PUT http://127.0.0.1:12345/jobs/2 HTTP/1.1
+content-type: application/json
+
+{}
+###
+# Got response:
+# HTTP 404
+# content-length: 64
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:33:14 GMT
+# 
+# {"code":3,"message":"Job 2 not found.","reason":"ERR_NOT_FOUND"}

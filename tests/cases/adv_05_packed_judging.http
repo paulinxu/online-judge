@@ -1,0 +1,14 @@
+###
+# Send request:
+POST http://127.0.0.1:12345/jobs HTTP/1.1
+content-type: application/json
+
+{"contest_id":0,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b + 1);}","user_id":0}
+###
+# Got response:
+# HTTP 200
+# content-length: 1088
+# content-type: application/json
+# date: Thu, 25 Jul 2024 15:32:34 GMT
+# 
+# {"cases":[{"id":0,"info":"","result":"Compilation Success","time":0},{"id":1,"info":"","result":"Wrong Answer","time":0},{"id":2,"info":"","result":"Skipped","time":0},{"id":3,"info":"","result":"Skipped","time":0},{"id":4,"info":"","result":"Wrong Answer","time":0},{"id":5,"info":"","result":"Skipped","time":0},{"id":6,"info":"","result":"Skipped","time":0},{"id":7,"info":"","result":"Wrong Answer","time":0},{"id":8,"info":"","result":"Skipped","time":0},{"id":9,"info":"","result":"Skipped","time":0},{"id":10,"info":"","result":"Skipped","time":0}],"created_time":"2024-07-25T15:32:35.415547658Z","id":0,"result":"Wrong Answer","score":0.0,"state":"Finished","submission":{"contest_id":0,"language":"Rust","problem_id":1,"source_code":"fn main() {let mut line1 = String::new();std::io::stdin().read_line(&mut line1).unwrap();let a: i32 = line1.trim().parse().unwrap();let mut line2 = String::new();std::io::stdin().read_line(&mut line2).unwrap();let b: i32 = line2.trim().parse().unwrap();println!(\"{}\", a + b + 1);}","user_id":0},"updated_time":"2024-07-25T15:32:35.665228662Z"}
